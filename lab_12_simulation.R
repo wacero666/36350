@@ -28,12 +28,18 @@ run_simulation = function(n_trials, n, p, cutoff) {
       k = c(k,model_select(data$covariates, data$responses, cutoff))
     }
   }
-  hist(k)
+  write(k, file = "p-value.csv", sep= ",")
+}
+
+make_plot = function(datapath) {
+  MyData = read.csv(datapath, sep = ",")
+  hist(as.numeric(as.vector((MyData))))
 }
 
 
-run_simulation(3, c(100,1000,10000), c(10,20,50), 0.05)
 
+run_simulation(3, c(100,1000,10000), c(10,20,50), 0.05)
+make_plot("p-value.csv")
 
 
 
