@@ -32,7 +32,7 @@ run_simulation = function(n_trials, n, p, cutoff) {
 }
 
 
-
+run_simulation(3, c(100,1000,10000), c(10,20,50), 0.05)
 
 
 
