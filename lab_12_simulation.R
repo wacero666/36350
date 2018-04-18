@@ -28,7 +28,6 @@ run_simulation = function(n_trials, n, p, cutoff) {
       k = c(k,model_select(data$covariates, data$responses, cutoff))
     }
   }
- 
   hist(k)
 }
 
